@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Datastore Serial and Async test App</title>
+    </head>
+    <body>
+        {% autoescape true %}
+        <b>Datastore Serial & Async test</b>
+        <br><br>
+        <a href="/?action=populate">Populate Datastore</a>
+        <br><br>
+        <form action="/?action=fetch" method="get">
+        	<input type="hidden" name="action" value="fetch">
+            Entities to fetch: <input type="text" name="n_entities" value='300'><br>
+            Repeats: <input type="text" name="repeats" value='10'><br>
+            <input type="submit" value="Fetch sync and async" />
+        </form>
+        {% endautoescape %}
+    </body>
+</html>
